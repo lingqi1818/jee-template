@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="Cache-Control" content="no-cache" />
+        <title>监控</title>
+        <style>
+		.titler{text-align:left; padding-left:30px; width:970px; margin:0 auto 70px;}
+		.hc{width:1000px;height:400px; margin:0 auto 70px;}
+		</style>
+  <script type="text/javascript" src="http://cdn.hcharts.cn/jquery/jquery-1.8.3.min.js"></script>
+  <script type="text/javascript" src="http://cdn.hcharts.cn/highcharts/highcharts.js"></script>
+  <script type="text/javascript" src="http://cdn.hcharts.cn/highcharts/exporting.js"></script>
+  <script type="text/javascript" src="http://cdn.hcharts.cn/highcharts/highcharts-3d.js"></script>
+  <script>
+    $(function () {
+    $('#container').highcharts({
+        chart: {
+            type: 'pie',
+            options3d: {
+                enabled: true,
+                alpha: 45,
+                beta: 0
+            }
+        },
+        title: {
+            text: '各类注册用户对比'
+        },
+        tooltip: {
+            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+        },
+        plotOptions: {
+            pie: {
+                allowPointSelect: true,
+                cursor: 'pointer',
+                depth: 35,
+                dataLabels: {
+                    enabled: true,
+                    format: '{point.name}'
+                }
+            }
+        },
+        series: [{
+            type: 'pie',
+            name: '注册量',
+            data: [
+            	['和通行证用户总数',    ${and}],
+                ['通过手机注册',     ${mobile}],
+                ['通过email注册',   ${email}]
+                
+            ]
+        }]
+    });
+});	
+  </script>
+  <script>
+$(function () {                                                                
+    $('#container1').highcharts({                                           
+        chart: {                                                           
+            type: 'bar'                                                    
+        },                                                                 
+        title: {                                                           
+            text: '登录对比图'                    
+        },                                                                 
+        subtitle: {                                                        
+            text: ''                                  
+        },                                                                 
+        xAxis: {                                                           
+            categories: ['登录对比'],
+            title: {                                                       
+                text: null                                                 
+            }                                                              
+        },                                                                 
+        yAxis: {                                                           
+            min: 0,                                                        
+            title: {                                                       
+                text: '次',                             
+                align: 'high'                                              
+            },                                                             
+            labels: {                                                      
+                overflow: 'justify'                                        
+            }                                                              
+        },                                                                 
+        tooltip: {                                                         
+            valueSuffix: ' 次'                                       
+        },                                                                 
+        plotOptions: {                                                     
+            bar: {                                                         
+                dataLabels: {                                              
+                    enabled: true                                          
+                }                                                          
+            }                                                              
+        },                                                                 
+        legend: {                                                          
+            layout: 'vertical',                                            
+            align: 'right',                                                
+            verticalAlign: 'top',                                          
+            x: -40,                                                        
+            y: 100,                                                        
+            floating: true,                                                
+            borderWidth: 1,                                                
+            backgroundColor: '#FFFFFF',                                    
+            shadow: true                                                   
+        },                                                                 
+        credits: {                                                         
+            enabled: false                                                 
+        },                                                                 
+        series: [{                                                         
+            name: '今日登陆总次数',                                             
+            data: [${pv}]                                   
+        }, {                                                               
+            name: '今日登陆总人数',                                             
+            data: [${uv}]                                  
+        }]                                                                 
+    });                                                                    
+}); 
+</script>
+  <script>
+$(function () {
+    $('#container2').highcharts({
+        chart: {
+            type: 'column'
+        },
+        title: {
+            text: '当前各类注册用户对比'
+        },
+        subtitle: {
+            text: ''
+        },
+        xAxis: {
+            categories: [
+                '当前用户数据对比'
+            ]
+        },
+        yAxis: {
+            min: 0,
+            title: {
+                text: ''
+            }
+        },
+        tooltip: {
+            headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+            pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+                '<td style="padding:0"><b>{point.y:.1f}</b></td></tr>',
+            footerFormat: '</table>',
+            shared: true,
+            useHTML: true
+        },
+        plotOptions: {
+            column: {
+                pointPadding: 0.2,
+                borderWidth: 0
+            }
+        },
+        series: [
+        {
+            name: '和通行证用户总数',
+            data: [${and}]
+
+        }, {
+            name: '手机注册用户',
+            data: [${mobile}]
+
+        },
+        {
+            name: 'email注册用户',
+            data: [${email}]
+
+        }]
+    });
+});
+</script>
+    </head>
+    <body>
+    	<div class="titler">
+    	<h3>当前系统信息状况如下：</h3>
+    	<br />
+    	和通行证用户总数：${and}<br />
+    	通过手机注册账号总数：${mobile}<br />
+		通过email注册账号总数：${email}<br />
+		
+		今日登陆总次数：${pv}
+<br />
+		今日登陆总人数：${uv}
+<br />
+		</div>
+		 <div id="container2" class="hc"></div>
+		 <div id="container1" class="hc"></div>
+	</body>
+</html>

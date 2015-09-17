@@ -1,0 +1,171 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>统一认证</title>
+	<link href="css/bootstrap.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/community.css" />
+	<link rel="stylesheet" href="css/loginBox.css" />
+	<link rel="stylesheet" href="css/index.css" />
+    <script src="js/jquery-1.8.2.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/clear-innerHTML.js"></script>
+    <script src="js/login.js"></script>
+    <script src="js/sha1.js" type="text/javascript"></script>
+    <script>
+    	$(document).ready(function(){
+			var curLi;
+			$(".hd-nav li a").click(function(){
+				curLi=$(this);
+				
+			});
+			$(".hd-nav li a").click(function(){//鼠标点击也可以切换
+				$(".bs-block").removeClass("bs-block");
+				$(".bs-docs-container").eq($(".hd-nav li a").index(curLi)).addClass("bs-block");
+				$(".active").removeClass("active");
+				curLi.addClass("active");
+				
+				if($("#authType").val() == "MA"){
+	    		 	$("#authType").val("UPDS");
+	    	 		}else{
+	    		 	$("#authType").val("MA");
+	    		 }
+			});
+		});
+    </script>
+      <!-- 
+  <script type="text/javascript">
+     function initialLogin(authType)
+     {
+        if(authType=="UPDS")
+        {
+        	$(".bs-block").removeClass("bs-block");
+            $("#UPcontent").show();
+	    	$("#UPnav").addClass("bs-block");
+	    	$("#UPnav").addClass("bs-active");
+        }else{
+           $(".bs-block").removeClass("bs-block");
+            $("#MAcontent").show();
+	    	$("#MAnav").addClass("bs-block");
+	    	$("#MAnav").addClass("bs-active");
+        }
+	 }
+-->
+</head>
+<body >
+	<div id="docwrap" class="box">  
+    	<div class="main">  
+   	    	<header id="hd" class="main-head">  
+            	<div class="hd-logo">
+                	<p class="left">
+               	    	<img src="images/login-img02.png" width="104" height="29">
+                        <span class="bor-left"></span>
+                        <span class="font-size18 col-0a2353"><strong>统一帐号</strong></span>
+                    </p>
+                    <p class="right">
+                    	<button type="button" class="close" data-dismiss="modal" aria-hidden="true" id="close">&times;</button>
+                    </p>
+          		</div>
+                
+                <nav class="hd-nav clearfix">  
+                	<ul>   
+                        <li><a href="javascript:void(0)" class="active" id="UPnav">密码登录</a></li>
+                        <li><a href="javascript:void(0)" id="MAnav">一键登录</a></li>
+                    </ul>   
+                </nav>  
+          </header>  
+          <div id="content">
+          		<!--密码登录content-->
+          	   <div class="bs-docs-container bs-block" id="UPcontent">
+                   <div id="section-log">
+                      <p class="inp-tit font-size14"><span class=" col-900707 right font-size12" id="upUsernameException"></span></p>
+                      <div class=" error-accon">
+                         <input class="txt3 icon-input font-size22 col-c4c4c4" type="text" id="upUsername" value="请输入手机号/邮箱">
+                         <em class="icon-user"></em>
+                      </div>
+                      <p class="inp-tit font-size14 col-c4c4c4">原业务帐号也可登录 <span class="col-900707 right font-size12" id="passwordException"></span></p>
+                      <div class=" error-accon">
+                         <input class="txt3 icon-input font-size22 col-c4c4c4" type="text" value="请输入密码/短信验证码" id="pwdText">
+                         <input class="txt3 icon-input font-size22" type="password" value="" id="password" style="display:none">
+                         <em class="icon-password"></em>
+                      </div>
+                      
+                      <div id="LoginImgCodeDiv" style="display:none">
+                      <p class="inp-tit font-size14">登录图形验证码 <span class=" col-900707 right font-size12" id="loginImgCodeException"></span></p>
+                      <div class=" error-accon">
+                         <input id="loginImgCode" name="" type="text" class="txt3 col-c4c4c4" value="请输入图中文字">
+                      </div>
+                     <div id="section-log">
+                     <div class=" error-accon">
+                     <img id="loginImg" src="images/mobile-img01.jpg" width="40%" class="img-responsive left" alt="Responsive image">
+                     <a id="loginImgChange" href="javascript:;" class="col-blue left font-size12 mar10" >看不清</a>
+                 	 </div>
+                 	  </div>
+                 	   </div>
+                  	  <div id="DSImgCodeDiv" style="display:none">
+                      <p class="inp-tit font-size14">短信图形验证码 <span class=" col-900707 right font-size12" id="DSImgCodeException"></span></p>
+                      <div class=" error-accon">
+                         <input id="DSImgCode" name="" type="text" class="txt3 col-c4c4c4" value="请输入图中文字">
+                      </div>
+                     <div id="section-log">
+                     <div class=" error-accon">
+                     <img id="DSImg" src="images/mobile-img01.jpg" width="40%" class="img-responsive left" alt="Responsive image">
+                     <a id="DSImgChange" href="javascript:;" class="col-blue left font-size12 mar10" >看不清</a>
+                 	 </div>
+                 	 </div>
+                 	 </div>
+                   </div>
+                   <div id="section-log">
+                    <a id="forgetPwd"  href="javascript:;" class=" col-005c99 font-size14">忘记密码</a>
+                    <a href="javascript:;" class="btn greybtn btn-radius-none right" id="getDS">获取动态密码</a>
+                   </div>
+                   <div id="section-log">
+                    <a href="javascript:;" class="btn greybtn btn-radius-none right" id="getDS2">获取动态密码2</a>
+                   </div>
+                   <div id="section-log">
+                        <input name="" type="button" value="登录" id="normal" class="btn03 btn-blue btn-lg"/>
+                   </div>
+                   <div id="section-log">
+                    <a href="javascript:;" class=" col-005c99 font-size14 Loginregister">注册新帐号</a>
+                   </div>
+               </div>
+               <!--一键登录content-->
+               <div class="bs-docs-container" id="MAcontent">
+                   <div id="section-log">
+                      <p class="inp-tit font-size14"><span class=" col-900707 right font-size12" id="maUsernameException"></span></p>
+                      <div class=" error-accon" >
+                         <input class="txt3 icon-input col-c4c4c4" type="text" id="maUsername" value="请输入正确的移动手机号码"  maxlength="11">
+                         <em class="icon-user"></em>
+                      </div>
+                      <div id="maImgCodeDiv" style="display:none">
+                      <p class="inp-tit font-size14">图形验证码 <span class=" col-900707 right font-size12" id="maImgCodeException"></span></p>
+                      <div class=" error-accon">
+                         <input id="maImgCode" name="" type="text" class="txt3 col-c4c4c4" value="请输入图中文字">
+                      </div>
+                        <div id="section-log">
+                    	 <div class=" error-accon">
+                    	 <img id="maImg" src="images/mobile-img01.jpg" width="40%" class="img-responsive left" alt="Responsive image">
+                   		  <a id="maImgChange" href="javascript:;" class="col-blue left font-size12 mar10" >看不清</a>
+                  		</div>
+                      </div>
+                   </div>
+                   
+                 
+                   </div>
+                   
+                   <div id="section-log">
+                        <input name="" type="button" value="登录" id="quick" class="btn03 btn-blue btn-lg"/>
+                   </div>
+                   <div id="section-log">
+                    <a href="javascript:;" class=" col-005c99 font-size14 Loginregister">注册新帐号</a>
+                   </div>
+               </div>
+          </div>
+      </div>  
+	</div>  
+	  <input type="hidden" id=“authType” name="authType" value="UP"/>
+	<script type="text/javascript">
+</script> 
+</body>
+</html>

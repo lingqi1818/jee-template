@@ -1,0 +1,91 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context-3.0.xsd
+http://www.springframework.org/schema/mvc
+http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd"
+	default-autowire="byName">
+	<context:component-scan base-package="com.cmcc.normandy,com.cmcc.idmp,com.cmcc.client" />
+	<bean id="viewResolver"
+		class="org.springframework.web.servlet.view.velocity.VelocityViewResolver">
+		<property name="suffix" value=".vm" />
+		<!-- 解决乱码 -->
+		<property name="contentType">
+			<value>text/html;charset=UTF-8</value>
+		</property>
+	</bean>
+	<bean id="velocityConfig"
+		class="org.springframework.web.servlet.view.velocity.VelocityConfigurer">
+		<property name="resourceLoaderPath" value="/WEB-INF/vm" />
+		<!-- 解决乱码 -->
+		<property name="velocityProperties">
+			<props>
+				<prop key="input.encoding">UTF-8</prop>
+				<prop key="output.encoding">UTF-8</prop>
+			</props>
+		</property>
+	</bean>
+
+	<bean
+		class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">
+		<property name="messageConverters">
+			<list>
+				<bean
+					class="org.springframework.http.converter.json.MappingJacksonHttpMessageConverter" />
+			</list>
+		</property>
+	</bean>
+
+  	<mvc:interceptors>
+  	
+  		<!-- 自服务的url拦截 -->
+		<mvc:interceptor>
+			<mvc:mapping path="/uc/**"/>
+			<mvc:mapping path="/in/**"/>
+			<bean class="com.cmcc.normandy.web.action.uc.SecurityInterceptor" >
+				<property name="userAuthnService" ref="userAuthnService" />
+				<property name="userService" ref="user_userService" />
+				<property name="ignored">
+					<list>
+				    	<value>/uc/check</value>
+				    	<value>/uc/securityquestion</value>
+				    	<value>/uc/user</value>
+				      	<value>/uc/home/email/activate</value>
+				      	<value>/in/rsakey</value>
+				      	<value>/in/createToken</value>
+				      	<value>/in/phone/register</value>
+				      	<value>/in/sendMsg</value>
+				      	<value>/in/findPasswordByMsisdn</value>
+				      	<value>/in/userFindPassword</value>
+				      	<value>/in/resetPassword</value>
+				      	<value>/in/userQueryIsExists</value>
+				      	<value>/in/securityAnswerValidateByPassport</value>
+				      	<value>/in/securityUserQuestion</value>
+				      	<value>/in/mail/register</value>
+				      	<value>/in/mail/confirm</value>
+				      	<value>/in/mail/change</value>
+				      	<value>/in/mail/checkold</value>
+				      	<value>/in/passportRelevance</value>
+				  	</list>
+				 </property>
+			</bean>
+		</mvc:interceptor>
+		
+	</mvc:interceptors>
+	
+	<!-- <bean id="urlMapping" class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+		<property name="mappings">
+			<props>
+				<prop key="smsReceiveCb">SmsReceiveCbRemote</prop>
+			</props>
+		</property>
+	</bean> -->
+	
+	
+	
+	
+</beans>

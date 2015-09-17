@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="Cache-Control" content="no-cache" />
+        <title>检测</title>
+    </head>
+    <body>
+    	<div style="text-align:center;">
+    	<h3>请您填写以下信息</h3>
+    	<br />
+		<form action="ok" method="post">
+			<div>您的手机号码:</div>
+			<div><input type="text" name="msisdn" value="$!msisdn" maxlength="16" /></div>
+			<div>您的位置(城市):</div>
+			<div><input type="text" name="city" maxlength="32" /></div>
+			<div>APN(可不填):</div>
+			<div><input type="text" name="apn" value="$!apn" maxlength="16" /></div>
+			<div><input type="submit" value="提 交" /></div>
+		</form>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,40 @@
+<html>
+<head>
+<title>获取appkey页面</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<!--  
+<script src="${basePath}normandy/js/jquery-1.8.2.min.js"></script>
+<script src="${basePath}normandy/js/json.js"></script>
+<script src="${basePath}normandy/js/client.js"></script>
+-->
+<!--
+<script src="${basePath}js/client/jquery-1.8.2.min.js"></script>
+<script src="${basePath}js/client/json.js"></script>
+<script src="${basePath}js/client/client.js"></script>
+ -->
+<script src="../js/client/jquery-1.8.2.min.js"></script>
+<script src="../js/client/json.js"></script>
+<script src="../js/client/client.js"></script>
+<script type="text/javascript">
+	basePath= "${basePath}";
+	</script> 
+</head>
+<body>
+
+<br/>
+<h2>此页面获取appkey,如果您还未拥有sourceid,请联系管理员获取sourceid</h2><br/>
+
+请输入sourceid:<input type="text" id="appid" size="50" value="10000"/><br/>
+请输入包名:&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="appPackage" size="50" value="aaaaaa"/><br/>
+请输入包签名:&nbsp;&nbsp;<input type="text" id="sign" size="50" value="aaaaaa"/><br/>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="javascript:;"  id="submit" >提交</a>
+<a href="javascript:;"  id="reset" >重置</a>
+<br/>
+您本次获取的appkey为：<input type="text" id="appkey" size="50"/><br/>
+您本次获取的appId为：<input type="text" id="appId" size="50"/><br/>
+<br/>
+<br/>
+<div id="error" style="height: 100px; width: 200px;"></div>
+</body>
+</html>

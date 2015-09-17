@@ -1,0 +1,47 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+ <parent>
+ <groupId>${projectName}.all</groupId>
+ <version>0.1</version>
+ <artifactId>${projectName}.all</artifactId>
+ <relativePath>../pom.xml</relativePath>
+</parent>
+  <groupId>${projectName}.biz</groupId>
+  <artifactId>${projectName}.biz</artifactId>
+  <packaging>jar</packaging>
+  <version>0.1</version>
+  <name>${projectName}.biz</name>
+<dependencies>	
+<dependency>
+  <groupId>${projectName}.common</groupId>
+  <artifactId>${projectName}.common</artifactId>
+  <version>${pom.version}</version>
+</dependency>
+<dependency>
+  <groupId>${projectName}.dal</groupId>
+  <artifactId>${projectName}.dal</artifactId>
+  <version>${pom.version}</version>
+</dependency>
+
+</dependencies>
+  <build>
+	<resources>
+      <resource>
+        <directory>src/main/java</directory>
+        <includes>
+          <include>**/*.xml</include>
+          <include>**/*.properties</include>
+        </includes>
+      </resource>
+      <resource>
+        <directory>src/main/resources</directory>
+        <includes>
+          <include>**/*.xml</include>
+          <include>**/*.properties</include>
+        </includes>
+      </resource>
+    </resources>
+	<finalName>${projectName}.biz-${pom.version}</finalName>
+  </build>
+</project>

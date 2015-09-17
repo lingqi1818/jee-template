@@ -1,0 +1,13 @@
+.txt-bg span.text-title {
+    position: absolute;
+    top: 7px;
+    left: 10px;
+    color: rgb(36, 36, 36);
+    font-weight: normal;
+    text-align: left;
+    width:100px;
+}
+
+.exception_ {
+	 text-align: left;
+}

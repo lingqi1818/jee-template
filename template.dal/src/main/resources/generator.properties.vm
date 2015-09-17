@@ -1,0 +1,2 @@
+classpath=/Users/chenke/.m2/repository/mysql/mysql-connector-java/5.1.31/mysql-connector-java-5.1.31.jar
+targetProject=/Users/chenke/Documents/javawork/${projectName}/${projectName}.dal/src/main/java/

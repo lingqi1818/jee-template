@@ -1,0 +1,18 @@
+<html>
+<head>
+<title>中国移动统一认证帐号登录</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+</head>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<body>
+<br/>
+<center>
+<form action="doLogin" method="post">
+用户名：<input type="text" name="username" id="username" size="35"/><br/>
+密码：<input type="password" name="password" id="password" size="35"/><br/>
+<input type="submit" value="登录"/>
+</form>
+</center>
+</body>
+</html>

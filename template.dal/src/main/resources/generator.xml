@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+  <properties resource="generator.properties"/> 
+  
+  <classPathEntry location="${classpath}" />
+
+  <context id="Mysql" targetRuntime="MyBatis3">
+    <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                    connectionURL="jdbc:mysql://localhost:3306/test"
+                    userId="root"
+                    password="root">
+    </jdbcConnection>
+
+    <javaTypeResolver >
+      <property name="forceBigDecimals" value="false" />
+    </javaTypeResolver>
+
+    <javaModelGenerator targetPackage="com.helijia.monitor.dal.model" targetProject="${targetProject}"/>
+
+    <sqlMapGenerator targetPackage="com.helijia.monitor.dal.mapper"  targetProject="${targetProject}"/>
+
+    <javaClientGenerator type="XMLMAPPER" targetPackage="com.helijia.monitor.dal.mapper"  targetProject="${targetProject}"/>
+
+    <table schema="test" tableName="STUDENT" domainObjectName="Student" />
+  </context>
+</generatorConfiguration>

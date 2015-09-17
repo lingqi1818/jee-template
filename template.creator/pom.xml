@@ -1,0 +1,48 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+ <parent>
+ <groupId>template.all</groupId>
+ <version>0.1</version>
+ <artifactId>template.all</artifactId>
+ <relativePath>../pom.xml</relativePath>
+</parent>
+  <groupId>template.creator</groupId>
+  <artifactId>template.creator</artifactId>
+  <packaging>war</packaging>
+  <version>0.1</version>
+  <name>template.creator</name>
+<dependencies>
+<dependency>
+  <groupId>template.common</groupId>
+  <artifactId>template.common</artifactId>
+  <version>${pom.version}</version>
+</dependency>
+<dependency>
+    <groupId>org.springframework</groupId>
+    <artifactId>spring-test</artifactId>
+    <scope>test</scope>
+</dependency>
+</dependencies>
+  <build>
+	<resources>
+      <resource>
+        <directory>src/main/java</directory>
+        <includes>
+          <include>**/*.xml</include>
+          <include>**/*.properties</include>
+        </includes>
+      </resource>
+      <resource>
+        <directory>src/main/resources</directory>
+        <includes>
+          <include>**/*.xml</include>
+          <include>**/*.properties</include>
+        </includes>
+      </resource>
+    </resources>
+	<finalName>template.creator-${pom.version}</finalName>
+	<plugins>
+    </plugins>
+  </build>
+</project>

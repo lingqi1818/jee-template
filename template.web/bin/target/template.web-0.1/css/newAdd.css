@@ -1,0 +1,17 @@
+.aaaaa li span{
+	float:left;
+	margin-left:12px;
+	text-align:right;
+	width:auto;
+}
+
+.aaaaa li label{
+	float:left;
+	margin-left:12px;
+	text-align:right;
+	width:auto;
+}
+.newPwd{margin-left:60px;text-align:right;}
+.aaaaa li  .left1{float:left;width:auto;}
+.setNewPwd{margin-left:0;}
+.pwdS{width:auto;}

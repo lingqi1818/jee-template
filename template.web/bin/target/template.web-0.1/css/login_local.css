@@ -1,0 +1,23 @@
+#loginBox{
+	margin: 20px auto;
+	width:485px;
+	min-height:550px;
+	overflow:hidden;
+	/*filter: Alpha(Opacity=50) /* for IE */
+	/*background-color: rgba(0, 0, 0, 0.5); /*for FF*/
+	
+	z-index:9999;
+	
+}
+
+#loginBG{
+	margin: 0 auto;
+	width:100%;
+	height:100%;
+	position:fixed; /*-------瀹氫綅box鍦ㄦ祻瑙堝櫒涓殑浣嶇疆锛屾暟鍊煎彲浠ユ洿鏀�------*/
+	filter: Alpha(Opacity=50);				/* for IE */
+	background-color: rgba(0, 0, 0, 0.5);	/*/*for FF*/
+	
+	z-index:9998;
+	
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>中国移动-登录</title>
+		<link rel="icon" href="favicon32.ico" mce_href="favicon32.ico" type="image/x-icon"/>
+		<link rel="shortcut icon" href="favicon.ico" mce_href="favicon.ico" type="image/x-icon"/>
+        <link rel="stylesheet" type="text/css" href="css/main.css?v=2.4.0.9">
+    </head>
+    <body>
+		<input type="hidden" name="dispatcher" id="dispatcher-admin" value="login"/>
+		<div class="login-other" style="width:470px;">
+			<div class="aui_titleBar">
+				<div class="aui_title">
+					<span class="aui-cmcc"></span>
+					<q></q>
+					<span class="aui-one">和通行证</span>
+				</div>
+			</div>
+			<div class="form-login J_FormLogin">
+				<div class="form-tab J_Tabs">
+					<ul class="clearfix">
+						<li class="active">密码登录</li>
+						<li class="fr">一键登录</li>
+					</ul>
+				</div>
+				<form class="J_ValidPsdForm" method="post" action="authn" cmcc-rsaAjax="rsakey">
+					<div class="form-item">
+						<input type="text" class="txt" id="J_AccountPsd" name="loginID" placeholder="帐户" />
+						<em class="em-account"></em>
+					</div>
+					<div class="form-item">
+						<input type="password" class="txt" id="J_PasswordPsd" placeholder="密码" />
+						<input type="hidden" class="J_RsaPsd" name="password" />
+						<em class="em-psd"></em>
+					</div>
+					<div class="form-item form-item0" style="display:none;">
+						<input type="text" class="txt" id="J_ImgCodePsd" placeholder="请输入图中文字" cmcc-ajax="captcha/graph/check" />
+						<em class="em-img"></em>
+						<div class="imgcode J_ImgCodeView">
+							<img alt="图形验证码" title="图形验证码" cmcc-ajax="captcha/graph" />
+							<a href="javascript:;">看不清</a>
+						</div>
+					</div>
+					<div class="noform-item">
+						<a href="#">忘记密码</a>
+					</div>
+					<div class="form-item form-item0">
+						<input type="submit" value="登录" class="login-submit"/>
+					</div>
+					<div class="noform-item">
+						<a href="#">注册新帐号</a>
+					</div>
+					<input type="hidden" class="J_Modulus" value="" />
+					<input type="hidden" class="J_PublicExponent" value="" />
+				</form>
+				<form class="J_ValidOneForm" method="post" action="authn/sim" cmcc-msgAjax="authn/dynamicpassword" cmcc-pollAjax="authn/sim/result" style="display:none;">
+					<div class="form-item">
+						<input type="text" class="txt" id="J_PhoneOne" placeholder="手机" />
+						<em class="em-account"></em>
+						<!-- <span class="Validform_checktip">邮箱地址</span> -->
+					</div>
+					<div class="form-item">
+						<p class="dynamiccode">SIM安全码：<span>8923</span></p>
+					</div>
+					<div class="form-item" style="display:none;">
+						<input type="text" class="txt" id="J_MsgCodeOne" placeholder="短信验证码" />
+						<em class="em-msg"></em>
+					</div>
+					<div class="noform-item" style="display:none;">
+						<input type="button" class="btn3" value="获取验证码" cmcc-ajax="login/dynamicpassword" id="J_GetMsgCodeOne"/>
+					</div>
+					<div class="form-item form-item-mb15" style="display:none;">
+						<input type="password" class="txt" id="J_ImgCodeOne" placeholder="请输入图中文字" cmcc-ajax="captcha/graph/check" />
+						<em class="em-img"></em>
+						<div class="imgcode J_ImgCodeView">
+							<img alt="图形验证码" title="图形验证码" cmcc-ajax="captcha/graph" />
+							<a href="javascript:;">看不清</a>
+						</div>
+					</div>
+					<div class="form-item form-item0">
+						<input type="submit" value="登录" class="login-submit"/>
+					</div>
+					<div class="noform-item">
+						<a href="#">首次使用</a>
+					</div>
+				</form>
+			</div>
+		</div>
+		<script src="js/seajs/base.min.js?v=2.4.0.9" id="seajsFile"></script>
+	</body>
+</html>

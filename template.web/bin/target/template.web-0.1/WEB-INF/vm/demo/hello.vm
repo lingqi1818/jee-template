@@ -1,0 +1,18 @@
+<html>
+<head>
+<title>Spring4 MVC -HelloWorld</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+</head>
+<body onload="load()">
+<br/>
+<h2>设置Memcached属性值:<h2>
+
+<form action="post" method="post">
+同步开关(open && close)：<br/>
+<input type="text" name="filter_switch" size="200" value="${filter_switch}"/><br/>
+同步过滤属性值：<br/>
+<input type="text" name="filter_params" size="200" value="${filter_params}"/><br/>
+<input type="submit" value="submit"/><input type="reset" value="reset"/>
+</form>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<html>
+<head>
+<title>Spring4 MVC --login</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+</head>
+<body>
+
+<br/>
+<h2>test loginRequest function:<h2><br/>
+input username
+<form action="loginRequest" method="post">
+<input type="text" name="username" size="10"/><br/>
+<input type="text" name="password" size="10"/><br/>
+
+<input type="submit" value="submit"/><input type="reset" value="reset"/>
+</form>
+</body>
+</html>

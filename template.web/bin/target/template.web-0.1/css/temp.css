@@ -1,0 +1,489 @@
+@charset "utf-8";
+/* CSS Document */
+
+@media (min-width: 768px) {
+
+#body404{
+	background:#dbd8d3;
+}	
+body#body404 #bd-wrap{
+	top:80px;
+}
+#bd-wrap{
+	background:#fff;
+	position:relative;
+	top:153px;
+	}	
+
+#bd-wrap .container-loss{
+	padding-top:10px;
+	padding-bottom:150px;
+	}
+#bd-wrap .container-404{
+	width:100%;
+	overflow:hidden;
+	background:#dbd8d3;
+	margin:0;
+	padding:0;
+	position:relative;
+	text-align:center;
+}	
+
+#bd-wrap .container-404 div.img-404{
+	width:743px;
+	height:650px;
+	margin:0 auto;
+	background: url(../images/404-img.jpg) no-repeat 65px 0;
+	position:relative;
+}
+#bd-wrap .container-404 div.img-404 span{
+	position:absolute;
+	top:280px;
+	left:198px;
+	font-size:58px;
+}
+#bd-wrap .container-404 .img-404 p.font-404{
+	width:110px;
+	line-height:45px;
+	padding-left:40px;
+	background:url(../images/404-icon.png) no-repeat 0 8px;
+	position:absolute;
+	bottom:85px;
+	left:300px;
+}
+#bd-wrap .container-404 .img-404 p.font-404 a{
+	color: #696661;
+}
+.drop-down-menu{
+	width:316px;
+	height:168px;
+	overflow-y:scroll;
+	z-index:100; 
+	background:#fff; 
+	border:solid 1px #01a1cb;
+	display:none;
+	padding-left:0;
+	position:absolute;
+	left:auto;
+	top:44px;
+	
+/**/}
+.drop-down-menu li{
+	padding-left:10px; 
+
+	text-align:left;
+	line-height:25px !important;
+	margin-top:0;
+	font-weight:normal;
+}
+.drop-down-menu li:hover{
+	background:#00b5e5;
+	color:#fff;
+	cursor:pointer;
+}
+.account-info{
+	height:40px;
+	border-bottom:1px solid #bbb;
+	width:95%;
+	margin:0 auto;
+	line-height:36px;
+	}
+.account-info span.title-border{
+	border-bottom:solid 3px #00a1cb;
+	line-height:36px;
+	padding:0 15px;
+}	
+.Progress-bar{
+	width:70px;
+	height:20px;
+	display:block;
+	float:left;
+	border:1px solid #e6e6e6;
+	background:#Fff;
+	margin:8px 10px 0 10px;}	
+.account-info p{
+	margin-right:18px;
+	
+	}	
+.account-info span{
+	float:left;
+	}	
+.Progress-bar .small-bar{
+	height:100%;
+	}	
+#list-2 p{
+	width:83%;
+	height:40px;
+	
+	margin:10px auto 0;
+	line-height:40px;
+	}
+#list-2 p span{
+	text-align:right;
+	display:block;
+	float:left;
+	}		
+#list-2 p .Percen1{
+	width:15%;
+	}	
+#list-2 p .Percen2{
+	width:12%;
+	}	
+#list-2 p .Percen3{
+	width:20%;
+	text-align:left;
+	}	
+#list-2 button,.Save,.Identity-info button{
+	font-size:14px;
+	padding:6px 23px;
+	margin-top:3px;
+	margin-right:10px;
+	}
+.mode1 p{
+	height:40px;
+	background:#edf8fb;
+	margin:0 auto;
+	line-height:40px;
+	}
+.mode1 p span{
+	text-align:right;
+	display:block;
+	float:left;
+	}		
+.mode1 p .Percen1{
+	width:15%;
+	}	
+.mode1 p .Percen2{
+	width:12%;
+	}	
+.mode1 p .Percen3{
+	width:18%;
+	}	
+.mode1 button,.Save,.Identity-info button{
+	font-size:14px;
+	padding:6px 23px;
+	margin-top:3px;
+	margin-right:10px;
+	}
+.mode1{
+	width:83%;
+	margin:22px auto 10px;
+	border-top:2px solid #cacaca;
+	border-bottom:2px solid #cacaca;
+	position:relative;
+	background:#fafafa;
+	}	
+.mode1 em{
+		display:block;
+		background:url(../images/top-arrow.png) no-repeat;
+		width:12px;
+		height:7px;
+		position:absolute;
+		left:50%;
+		margin-left:-6px;
+		top:-8px;
+		}
+.mode1 h2{
+		text-align:center;
+		font-size:16px;
+		font-weight:bold;
+		color:#242424;
+		margin:30px 0 12px;
+		}
+.change-pho{
+	/*width:70%;
+	margin:0 auto;*/
+	padding:0 0 25px;
+	}
+
+
+.bg-images{ border-bottom: dashed 1px #bbb;}
+.change-pho li span a{ padding:0 20px;}	
+.change-pho li span a:hover,.change-pho li span a:focus{ text-decoration:none;}
+.mode1 li{
+		line-height:30px;
+		margin:0;
+		width:100%;
+		overflow:hidden;
+		padding-top:10px;
+		position:relative;
+		}
+.mode1 li span{
+	display:block;
+	float:left;
+	/*width:18%;*/
+	width:27%;
+	text-align:right;
+	margin-right:15px;
+	}		
+
+.mode1 li .pos-text{
+	float:left;
+	width:160px;
+	margin-right:0;
+	}
+
+#list-1 .change-pho button,#list-2 .change-pho button{
+	margin-top:0;
+	margin-left:0;}
+
+.btn{ padding:9px 35px; font-size:14px; margin:0 24px 0 0;}
+.btn02{ padding:10px 78px;}
+#list-1 .change-pho li.spec-btn button.btn-dark-9c9c9c,
+#list-2 .change-pho li.spec-btn button.btn-dark-9c9c9c,
+.mode1 .change-pho li.spec-btn button.btn-dark-9c9c9c{
+	padding-left:40px;
+	padding-right:40px;
+	}	
+#list-1 .change-pho li.spec-btn button.btn-blue,
+#list-2 .change-pho li.spec-btn button.btn-blue,
+.mode1 .change-pho li.spec-btn button.btn-blue{
+	width:157px;
+	height:37px;
+}
+.mode1 li .control-text{
+	line-height:18px;
+	}	
+hr{
+	margin-top:40px;}
+.mode2 .pos-text{
+	text-align:left;
+	color:#6a0a09;
+	line-height:17px;}	
+#list-1 p .per-green,#list-1 p .per-green i{
+	display:block;
+	}	
+#list-2 p .per-green{
+	padding-right:10px;
+}
+#list-1 p .per-green{
+	
+	width:70px;
+	border:1px solid #ccc;
+	background:#fff;
+	height:15px;
+	margin-top:10px;
+	margin-right:14px;
+	}	
+	
+#list-1 p .per-green i{
+	width:80%;
+	background:#88b929;
+	height:100%;}	
+
+.change-pho .sele-btn{
+	display:block;
+	width:34px;
+	height:34px;
+	float:left;
+	margin-left:2px;
+}	
+.down{	background: url(../images/sele-btn-down.png) no-repeat 0 0; }
+.up{	background: url(../images/sele-btn-up.png) no-repeat 0 0;
+}
+#list-2 .mode-input{
+	
+	padding:7px 0 7px 10px;
+	}	
+#list-2 .darkred,
+.mode1 .darkred{
+	margin-right:0;
+	color:#6A0A09;
+/*	position:absolute;
+	right:-1%;*/
+	text-align:left;
+	background:url(../images/error-icon.png) no-repeat 25px center;
+	padding-left:45px;
+	}	
+#list-2 .wid-inpbig{
+	width:317px;}	
+	
+#list-2 .Correct-tit{
+	background:url(../images/ture-icon.png) no-repeat 25px center;	
+	padding-left:45px;
+	color:#6a9134;
+	}
+#bd-list-2 li{
+	padding-top:30px;
+	}	
+#bd-list-2{	
+    width: 95%;
+	margin:0 auto;
+	overflow:hidden; 
+	padding-bottom:20px;
+    }
+#bd-list-2 .wid-password{
+	width:25%;
+	display: block;
+    float: left;
+	margin-right:99px;
+	}	
+#bd-list-2 .icon-blue{
+	background:url(../images/icon-blue.png) no-repeat 80px 5px;
+	padding-right:100px;
+	padding-top:5px;
+	line-height:21px;
+	}
+#bd-list-2	.txt-tit1{
+	float:left;
+	background:#ffffe5;
+	border:1px solid #c8c6a0;
+	padding:8px 23px 8px 14px;
+	color:#606254;
+	}
+#bd-list-2 .Status{
+	/*width:20%;*/
+	display:block;
+	float:left;
+	text-align:left;
+	}
+.Identity-info{
+	border:none;
+	overflow:hidden;
+	background:#fff;
+	}		
+.Identity-info button{
+	margin-top:0;
+	margin-left:3px;
+	}	
+.Identity-info .photo-Preview{
+	display:block;
+	width:182px;
+	height:112px;
+	background:#f1f1f1;
+	border:1px solid #b3b3b3;
+	-moz-border-radius: 5px;
+    -khtml-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+	}	
+.Report-loss{
+	width:95%;
+	margin:20px auto 115px;
+	
+	position:relative;
+	}	
+.Report-loss p{
+	padding-left:10%;
+	line-height:24px;
+	}	
+.Report-loss button{
+	position:absolute;
+	top:5px; right:28px;
+}
+.Report-loss:hover{background:#edf8fb;}
+														
+	}
+	
+
+/*挂失手机  css*/
+.loss-info{
+	line-height:74px;
+	background:url(../images/icon-people.png) no-repeat 33px 22px;
+	margin-bottom:15px;
+	border-bottom:solid 1px #c2c2c2;
+}
+.loss-info span{
+	width:100%;
+	display:block;
+	font-size:22px;
+	color:#3c404d;
+	padding-left:80px;
+	border-bottom:solid 1px #e7e7e7;
+}	
+#list-2 .list2-head{
+	width:97%;
+	height:34px;
+	line-height:34px;
+	border-left: solid 5px #00b5e5;
+	background:#efefef;
+	padding-left:13px;
+	margin:0 auto;
+}
+.mode1-loss	{
+	border-bottom:dashed 2px #dcdcdc;
+	border-top:none;
+	background:#fff;
+}
+.mode1-loss li span.span-wid{
+	width:288px;
+	line-height:18px;
+	margin-left:-75px;
+}
+	
+/*找回密码  css*/
+.password-info{
+	line-height:74px;
+	background:url(../images/icon-people.png) no-repeat 33px 22px;
+	margin-bottom:15px;
+}
+.password-info span{
+	width:100%;
+	display:block;
+	font-size:22px;
+	color:#3c404d;
+	padding-left:80px;
+}		
+.mode1-password{
+	border-top:none;
+	background:#fff;
+}
+#content .mode1-password{
+	display:none;
+}	
+.mode1-password .pass-change-pho{
+	overflow:hidden;
+}
+.mode1-password .pass-change-pho li.pass-img{
+	width:33%;
+	float:left;
+	display:inline;
+	text-align:center;
+}
+.mode1-password .pass-change-pho li.pass-img a{
+	display:block;
+	color:#242424;
+	line-height:65px;
+}
+.mode1-password .pass-change-pho li.pass-img a span{
+	float:none;
+	margin:0 auto;
+	width:31%;
+	text-align:center;
+}
+.mode1-password .pass-change-pho li.pass-img .active{
+	background:url(../images/find-pass-icon1.png) no-repeat;
+	position:relative;
+	z-index:10000;
+}
+.pass-img em{
+		display:block;
+		background:url(../images/top-arrow.png) no-repeat;
+		width:12px;
+		height:7px;
+		position:absolute;
+		top:177px;
+}
+/*销号  css*/
+.pin-no-info{
+	line-height:74px;
+	margin-bottom:15px;
+	border-bottom:solid 1px #c2c2c2;
+}
+.pin-no-info span{
+	width:100%;
+	display:block;
+	font-size:22px;
+	color:#3c404d;
+	padding-left:15px;
+	border-bottom:solid 1px #e7e7e7;
+}	
+.pin-no-width{
+	width:102px !important;
+}
+span.pin-no-mar{
+	margin-right:3px !important;
+}
+ul.pin-no-menu{
+	width:138px !important;
+}
